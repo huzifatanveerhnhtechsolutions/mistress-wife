@@ -1,8 +1,87 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+body {
+  scroll-behavior: smooth;
+}
 .inner-shadow-top {
     box-shadow: 100px 100px 50px rgb(0, 0, 0) inset
+  }
+
+  ::-webkit-scrollbar {
+    display: none;
+}
+  .hero_animation {
+    /* background-image: linear-gradient(147.92deg, rgba(203, 80, 178, 0.5) 0%, rgba(255, 255, 255, 0) 89.25%); */
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero_animation::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0%;
+    height: 0%;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 160px 100px rgba(203, 80, 178, 0.5);
+  } 
+
+  .hero_animation_forum {
+    position: relative;
+    overflow: hidden;
+    /* Ensure the parent container is positioned relative */
+  }
+  
+  .hero_animation_forum::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(147.92deg, rgba(203, 80, 178, 0.5) 10.41%, hsla(0, 0%, 100%, 0) 89.25%);
+    animation: changeBackgroundColor 8s infinite alternate;
+    z-index: -1; /* Place behind the content */
+  }
+  /* .hero_animation_forum::before {
+    content: '';
+    position: absolute;
+    z-index: -9;
+    top: 50%;
+    left: 0%;
+    width: 0%;
+    height: 0%;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    box-shadow: 0 0 200px 300px rgba(203, 80, 178, 0.5);
+  }  */
+  @keyframes changeBackgroundColor {
+    0%, 100% {
+      opacity: 1;
+    }
+    16.67% {
+      opacity: 0.9;
+    }
+    33.33% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    66.67% {
+      opacity: 0.5;
+    }
+    83.33% {
+      opacity: 0.4;
+    }
   }

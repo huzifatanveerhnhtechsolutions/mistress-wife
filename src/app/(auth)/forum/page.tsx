@@ -1,5 +1,4 @@
-import Home from "@/components/Home/Home";
-import Navbar from "@/components/ui/Navbar";
+import Forum from "@/components/Forum/Forum";
 import React from "react";
 
 type Props = {};
@@ -7,8 +6,7 @@ type Props = {};
 const Page = (props: Props) => {
   return (
     <div>
-      <Navbar />
-      <Home />
+      <Forum />
     </div>
   );
 };

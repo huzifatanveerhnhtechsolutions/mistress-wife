@@ -15,6 +15,11 @@ const config: Config = {
       },
       fontFamily: {
         cinzel: ["Cinzel"],
+        marope: ["Manrope"],
+        lato: ["Lato"],
+      },
+      textColor: {
+        tPurple: "#AC2CA8",
       },
     },
   },
