@@ -26,28 +26,28 @@ const ForumLeftSide = (props: Props) => {
         <div className="flex flex-col gap-2 ">
           <h1 className="text-lg">Rosy Marten</h1>
           <h2 className="flex items-center gap-2 text-sm">
-            <UserPlus fill="white" size={15} /> 1,299 followers
+            <UserPlus fill="white" stroke="none" size={15} /> 1,299 followers
           </h2>
         </div>
       </div>
       <div className="px-4">
         <ul>
           <li className="flex gap-4 items-center">
-            <Newspaper color="black" fill="#8DC63F" />
+            <Newspaper stroke="none" fill="#8DC63F" />
 
             <span className="border-b py-4 w-full">My Newsfeed</span>
           </li>
           <li className="flex gap-4 items-center">
-            <MessageSquare color="black" fill="#F7941E" />
+            <MessageSquare stroke="none" fill="#F7941E" />
 
             <span className="border-b py-4 w-full">Previous Form</span>
           </li>
           <li className="flex gap-4 items-center">
-            <Images color="black" fill="#1C75BC" />
+            <Images stroke="none" fill="#1C75BC" />
             <span className="border-b py-4 w-full">Images</span>
           </li>
           <li className="flex gap-4 items-center">
-            <Video color="black" fill="#9E1F63" />
+            <Video stroke="none" fill="#9E1F63" />
 
             <span className="border-b py-4 w-full">Videos</span>
           </li>

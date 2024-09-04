@@ -2,9 +2,11 @@ import { Bell, Images, Map, Pencil, Video } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
+type Props = {
+  handleActive: () => void;
+};
 
-const ForumTopBar = (props: Props) => {
+const ForumTopBar = ({ handleActive }: Props) => {
   return (
     <div className="flex items-center gap-4 ">
       <div className="bg-[#262D34] w-[90%]  rounded-xl p-3 flex gap-2 items-center">
@@ -21,9 +23,9 @@ const ForumTopBar = (props: Props) => {
         </div>
         <button className="bg-[#AC2CA8] p-2 rounded-lg">Publish</button>
       </div>
-      <div className="px-3 border-l">
-        <Bell color="black" fill="white" />
-      </div>
+      <button onClick={handleActive} className="px-3 border-l">
+        <Bell stroke="none" fill="white" />
+      </button>
     </div>
   );
 };

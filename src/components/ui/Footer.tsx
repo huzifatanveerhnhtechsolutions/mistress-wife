@@ -15,7 +15,7 @@ const Footer = (props: Props) => {
   return (
     <div className=" z-[99] mx-auto max-w-screen-2xl">
       <div className=" bg-[#101010]  pt-20 px-24 flex flex-col gap-12">
-        <div className="flex items-center justify-between w-[60%]">
+        <div className="flex items-center md:flex-row flex-col gap-5 justify-between w-full lg:w-[60%]">
           <Image
             src={"/assets/logo2.png"}
             alt="logo"

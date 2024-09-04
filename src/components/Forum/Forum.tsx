@@ -1,14 +1,26 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import ForumLeftSide from "./ForumLeftSide";
 import ForumTopBar from "./ForumTopBar";
 import ForumList from "./ForumList";
 import RecentComment from "./RecentComment";
+import Notification from "./Notification";
 
 type Props = {};
 
 const Forum = (props: Props) => {
+  const [active, setActive] = useState(false);
+  const handleActive = () => {
+    setActive(!active);
+  };
   return (
-    <div className="py-28 h-[calc(100vh+50vh)] font-lato hero_animation_forum z-50 ">
+    <div className="py-28 h-[calc(100vh)] font-lato hero_animation_forum z-50 ">
+      {active && (
+        <div className="absolute right-0 top-44 flex justify-end w-full float-right z-50 transition-all ease-in-out duration-300 ">
+          <Notification />
+        </div>
+      )}
+
       <div className="w-[90%] max-w-screen-2xl mx-auto flex gap-6">
         <div className="hidden lg:block w-[25%] sticky  h-[calc(100vh-7rem)] overflow-y-auto">
           <ForumLeftSide />
@@ -16,7 +28,7 @@ const Forum = (props: Props) => {
 
         <div className="w-full lg:w-[75%]">
           <div className="sticky  z-10 ">
-            <ForumTopBar />
+            <ForumTopBar handleActive={handleActive} />
           </div>
 
           <div className="flex gap-4 mt-4">
